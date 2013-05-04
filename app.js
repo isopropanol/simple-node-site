@@ -1,10 +1,10 @@
 //Module dependencies
 
 var express = require('express')
-	, style = require('stylus')
+	, stylus = require('stylus')
 	, nib = require('nib');
 var app =express();
-funciton compile(str,path){
+function compile(str,path){
 	return stylus(str)
 		.set('filename',path)
 		.use(nib());
@@ -15,6 +15,10 @@ app.use(express.logger('dev'));
 app.use(stylus.middleware(
 	{
 	src: __dirname+'/public'
-	, compile:complile
+	, compile:compile
 }));
 app.use(express.static(__dirname+'/public'));
+app.get('/',function(req,res){
+	res.end('Hi there!')
+})
+app.listen(3000);
