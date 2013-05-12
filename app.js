@@ -25,4 +25,10 @@ app.get('/selectjob',function(req,res){
 	res.render('selectjob',
 		{title:"What's your plan"}		)
 })
+app.post('/selectjob/detailsubmission',function(req,res){
+	//var name = req.body.place;
+		//city = req.body.city,
+		//country= req.body.country;
+	console.log(" in ");
+});
 app.listen(3000);

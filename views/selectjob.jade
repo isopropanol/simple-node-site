@@ -26,10 +26,8 @@ block content
 			});
 		.padded.selectfutureinfo(style="display:none")
 			h2.white Where are you working?
-			form
-				input(placeholder="Business/school?")
-				input(placeholder="City?")
-				input(placeholder="Country")
-				input(type="Submit",value="Done")
-
-		
+			form(action="/selectjob/detailsubmission",method="post")
+				input(placeholder="Business/school?", name="place",required,type="text")
+				input(placeholder="City?",name="city",required,type="text")
+				input(placeholder="Country",name="country",required,type="text")
+				input(type="submit",value="Done")
