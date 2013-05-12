@@ -11,7 +11,6 @@ function compile(str,path){
 }
 app.set('views',__dirname+'/views');
 app.set('view engine','jade');
-app.use(express.logger('dev'));
 app.use(stylus.middleware(
 	{
 	src: __dirname+'/public'
@@ -20,6 +19,10 @@ app.use(stylus.middleware(
 app.use(express.static(__dirname+'/public'));
 app.get('/',function(req,res){
 	res.render('index',
-		{title:"Home"}		)
+		{title:"Hoos Working Where"}		)
+})
+app.get('/selectjob',function(req,res){
+	res.render('selectjob',
+		{title:"What's your plan"}		)
 })
 app.listen(3000);

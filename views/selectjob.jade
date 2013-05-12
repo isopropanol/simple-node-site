@@ -1,0 +1,35 @@
+extend layout
+block imgback
+	div(style="position:fixed;width:200%;height:200%;left:-50%;top:-5%")
+		img(src="https://s3.amazonaws.com/media.jetstrap.com/zgyvyGO1Sr233R1BQjNl_Lawn_UVa_Rotunda_and_sky_2010.jpg",style="max-height:100%;max-width:100%;z-index:-5;")
+block content
+	.one.centered.half.padded(style="z-index:45;background:rgba(100,100,100,.7);text-align:center;")
+		h1(style="color:white;") What's your plan for the summer?
+		.small-tablet.padded.tiles.selectfutureoptions
+			.tile.selectfuture
+				i.icon-user
+				| I haz jobz
+			.tile.selectfuture
+				i.icon-user-md
+				| I has gradsch00l
+			.tile.selectfuture
+				i.icon-plane
+				| Traveling
+			.tile.selectfuture
+				i.icon-glass
+				| Can I haz Job?
+		script(type="text/javascript")
+			$(function(){
+				$(".selectfutureoptions").delegate(".selectfuture","click",function(){
+						$(".selectfutureinfo").slideDown(200);
+					})
+			});
+		.padded.selectfutureinfo(style="display:none")
+			h2.white Where are you working?
+			form
+				input(placeholder="Business/school?")
+				input(placeholder="City?")
+				input(placeholder="Country")
+				input(type="Submit",value="Done")
+
+		
