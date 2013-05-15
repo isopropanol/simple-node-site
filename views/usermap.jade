@@ -1,0 +1,16 @@
+extend layout
+
+block content
+	script(type="text/javascript",src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoS6Hv80Yr68F319i_hG-h0H9yd7mRe_A&sensor=false")
+	script(type="text/javascript")
+		function initialize() {
+			var mapOptions = {
+			center: new google.maps.LatLng(40.762919,-73.979568), zoom: 8,mapTypeId: google.maps.MapTypeId.ROADMAP};
+			var map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
+			}
+		google.maps.event.addDomListener(window, 'load', initialize);
+	.one.centered.half.padded(style="z-index:45;background:rgba(100,100,100,.7);text-align:center;")
+		h1(style="color:white;") Now find your friends!
+		h5.white Now what??
+		#map-canvas(style="height:200px;")
+	

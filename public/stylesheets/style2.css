@@ -4,3 +4,18 @@
 .white {
   color: #fff;
 }
+.circled-child img {
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+body {
+  background-image: url("/images/brotunda2.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center bottom;
+}
+.centerindexfooter.circled-child {
+  max-width: 245px;
+  z-index: 40;
+}

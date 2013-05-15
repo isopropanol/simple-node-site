@@ -33,6 +33,10 @@ app.post('/selectjob/detailsubmission',function(req,res){
 		//city = req.body.city,
 		//country= req.body.country;
 	console.log(" in "+req.body.place);
-	res.redirect("/");
+	res.redirect("/usermap");
 });
+app.get('/usermap', function(req,res){
+	res.render('usermap',
+		{title:"Hoos Working Where"})
+})
 app.listen(3000);
